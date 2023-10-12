@@ -9,8 +9,9 @@ body {
 }
 
 body {
-  overflow-y: auto;
+  overflow-y: 0%;
   min-height: 100vh;
+ 
 }
 
 textarea:focus,
@@ -55,16 +56,30 @@ footer {
 .tile {
   /* TODO: MODULE_CARDS */
   /* 1. Fill in the required properties. */
+  overflow: hidden;
+  height: 100%;
+  border-radius: 0.5rem;
+  position: relative;
+
 }
 
 .tile img {
   /* TODO: MODULE_CARDS */
   /* 1. Fill in the required properties. */
+  height: 50vh;
+  width: 35vh;
+  object-fit: cover;
+  margin-left: 0%;
+  margin-right: 0%;
+
 }
 
 .tile img:hover {
   /* TODO: MODULE_CARDS */
   /* 1. Fill in the required properties. */
+  transform: scale(1.1); /* Zoom in by 10% */
+  filter: brightness(0.7);
+  transition: transform 0.3s, filter 0.3s;
 }
 
 /* Hint: Notice the position:absolute and z-index properties. */
@@ -74,17 +89,25 @@ footer {
   z-index: 1;
   text-transform: uppercase;
   letter-spacing: 2px;
+  color: white;
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: 0%;
+  margin-left: 0%;
+  margin-right: 0%;
+
 }
 
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("../assets/hero2.jpg");
-    height: 50vh;
-    background-size: cover;
-    background-position: center;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
 
-  
+
 
   /* TODO: MODULE_LAYOUT */
   /* 1. Set a specific height. */
@@ -103,6 +126,7 @@ footer {
   border-radius: 8px;
   border: none;
 }
+
 
 .nav-link {
   margin-right: 36px;
